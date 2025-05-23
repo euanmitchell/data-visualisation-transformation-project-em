@@ -1,6 +1,7 @@
 ---
-title: "Project"
-author: "Insert Name Here"
+title: "Course One Optional Final Project"
+author: "Euan Mitchell"
+date: "05/23/2025"
 subtitle: "Investigation into Chicago taxis"
 echo: false
 bibliography: references.bib
