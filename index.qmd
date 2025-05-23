@@ -5,6 +5,9 @@ date: "05/23/2025"
 subtitle: "Investigation into Chicago taxis"
 echo: false
 bibliography: references.bib
+format:
+  html:
+    embed-resources: true
 ---
 
 ## Packages 
