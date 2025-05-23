@@ -10,9 +10,10 @@ format:
     embed-resources: true
 ---
 
-## Packages 
+## Packages
 
 ```{r}
+#| label: packages
 #| warning: false
 #| message: false
 library(tidyverse)
@@ -20,12 +21,46 @@ library(tidymodels)
 library(scales)
 ```
 
+```{r} 
+#| label: glimpse
+glimpse(taxi)
+```
+
 ## Question 1
 
+:::callout-note 
+Qu. Is there a relationship between the distance (in miles) someone travels in a taxi and if they tip or not?
+:::
 
-## Question 2 
+```{r}
+#| label: dist-tip-violin
+ggplot(
+  taxi, aes(x=tip, y=distance, color=tip)
+) + geom_violin() +
+  labs(
+    title="Tipping as a function of distance",
+    subtitle="Chicago taxi fare data",
+    x="Tip",
+    y="Distance (mi)",
+    color="Tip",
+  )
+```
 
+## Question 2
 
-## Your own question 
+:::callout-note 
+Qu. Do taxi passengers tend to tip more for the company Chicago Independents than the other companies?
+:::
 
+```{r}
+#| label: tip-comp
+taxi |>
+  mutate(independent = if_else(
+    company == "Chicago Independents", "yes", "no"
+  )) |>
+  ggplot(
+    aes(x=independent, fill=tip)
+  ) + geom_bar(position="fill")
+```
 
+## Your own question
