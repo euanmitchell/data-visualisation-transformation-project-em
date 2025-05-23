@@ -3150,6 +3150,41 @@ Note
 </section>
 <section id="your-own-question" class="level2">
 <h2 class="anchored" data-anchor-id="your-own-question">Your own question</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Qu. Is there any pattern in rates of tipping or distance ridden by day of the week?</p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 14 × 4
+# Groups:   dow [7]
+   dow   tip       n proportion
+   &lt;fct&gt; &lt;fct&gt; &lt;int&gt;      &lt;dbl&gt;
+ 1 Sun   yes     776     0.938 
+ 2 Sun   no       51     0.0617
+ 3 Mon   yes    1261     0.918 
+ 4 Mon   no      113     0.0822
+ 5 Tue   yes    1489     0.915 
+ 6 Tue   no      139     0.0854
+ 7 Wed   yes    1613     0.924 
+ 8 Wed   no      133     0.0762
+ 9 Thu   yes    1815     0.927 
+10 Thu   no      143     0.0730
+11 Fri   yes    1429     0.910 
+12 Fri   no      142     0.0904
+13 Sat   yes     826     0.922 
+14 Sat   no       70     0.0781</code></pre>
+</div>
+</div>
 </section>
 
 </main>

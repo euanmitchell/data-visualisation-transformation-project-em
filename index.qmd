@@ -64,3 +64,15 @@ taxi |>
 ```
 
 ## Your own question
+
+:::callout-note
+Qu. Is there any pattern in rates of tipping or distance ridden by day of the week?
+:::
+
+```{r}
+#| label: my-qu-data
+taxi |>
+  group_by(dow) |>
+  count(tip) |> 
+  mutate(proportion = n / sum(n))
+```
